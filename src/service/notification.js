@@ -4,7 +4,7 @@ export const getAllNotification = async () => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      "http://resource.futsal-am.my.id/api/users/notifications",
+      "http://resource.futsal-am.online:3000/api/users/notifications",
       {
         headers: {
           Authorization: token, // Pastikan Authorization benar
@@ -24,7 +24,7 @@ export const createNotification = async (data) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.post(
-      "http://resource.futsal-am.my.id/api/users/notification",
+      "http://resource.futsal-am.online:3000/api/users/notification",
       data,
       {
         headers: {

@@ -4,7 +4,7 @@ export const getCardInformation = async (type) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      `http://resource.futsal-am.my.id/api/users/information/card`,
+      `http://resource.futsal-am.online:3000/api/users/information/card`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -27,7 +27,7 @@ export const getChardInformation = async (type) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      `http://resource.futsal-am.my.id/api/users/information/chard`,
+      `http://resource.futsal-am.online:3000/api/users/information/chard`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export const getMostSpentCustomer = async () => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      `http://resource.futsal-am.my.id/api/users/information/most-spent`,
+      `http://resource.futsal-am.online:3000/api/users/information/most-spent`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export const getAllTransaction = async () => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      `http://resource.futsal-am.my.id/api/users/transaction`,
+      `http://resource.futsal-am.online:3000/api/users/transaction`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export const getFieldMostSpentCustomer = async (type) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      `http://resource.futsal-am.my.id/api/users/information/field`,
+      `http://resource.futsal-am.online:3000/api/users/information/field`,
       {
         headers: {
           "Content-Type": "application/json",

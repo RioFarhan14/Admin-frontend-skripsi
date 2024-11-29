@@ -4,7 +4,7 @@ export const getProductsField = async () => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      "http://resource.futsal-am.my.id/api/users/products/field",
+      "http://resource.futsal-am.online:3000/api/users/products/field",
       {
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export const getProductsMembership = async () => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      "http://resource.futsal-am.my.id/api/users/products/membership",
+      "http://resource.futsal-am.online:3000/api/users/products/membership",
       {
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export const getProductById = async (id) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      `http://resource.futsal-am.my.id/api/users/products`,
+      `http://resource.futsal-am.online:3000/api/users/products`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export const CreateProduct = async (data) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.post(
-      `http://resource.futsal-am.my.id/api/users/products`,
+      `http://resource.futsal-am.online:3000/api/users/products`,
       data,
       {
         headers: {
@@ -111,7 +111,7 @@ export const deleteProduct = async (id) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.delete(
-      `http://resource.futsal-am.my.id/api/users/products`,
+      `http://resource.futsal-am.online:3000/api/users/products`,
       {
         headers: {
           Authorization: token,
@@ -132,7 +132,7 @@ export const updateProduct = async (data) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.patch(
-      `http://resource.futsal-am.my.id/api/users/products`,
+      `http://resource.futsal-am.online:3000/api/users/products`,
       data,
       {
         headers: {

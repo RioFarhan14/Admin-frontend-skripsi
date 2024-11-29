@@ -3,7 +3,7 @@ import axios from "axios";
 export const login = async (username, password) => {
   try {
     const res = await axios.post(
-      "http://resource.futsal-am.my.id/api/users/login",
+      "http://resource.futsal-am.online:3000/api/users/login",
       {
         username: username,
         password: password,
@@ -19,7 +19,7 @@ export const login = async (username, password) => {
 export const validateToken = async (token) => {
   try {
     const res = await axios.get(
-      "http://resource.futsal-am.my.id/api/users/admin",
+      "http://resource.futsal-am.online:3000/api/users/admin",
       {
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export const validateToken = async (token) => {
 
 export const getDataUser = async (token) => {
   try {
-    const res = await axios.get("http://resource.futsal-am.my.id/api/users", {
+    const res = await axios.get("http://resource.futsal-am.online:3000/api/users", {
       headers: {
         "Content-Type": "application/json",
         Authorization: token,

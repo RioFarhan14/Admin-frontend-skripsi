@@ -3,7 +3,7 @@ import axios from "axios";
 export const getUsers = async () => {
   const token = localStorage.getItem("token");
   try {
-    const res = await axios.get("http://resource.futsal-am.my.id/api/users/", {
+    const res = await axios.get("http://resource.futsal-am.online:3000/api/users/", {
       headers: {
         "Content-Type": "application/json",
         Authorization: token, // Pastikan Authorization benar
@@ -34,7 +34,7 @@ export const getUserid = async (username) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      `http://resource.futsal-am.my.id/api/users/id?username=${username}`,
+      `http://resource.futsal-am.online:3000/api/users/id?username=${username}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export const getUser = async (id) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      `http://resource.futsal-am.my.id/api/users/data`,
+      `http://resource.futsal-am.online:3000/api/users/data`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +80,7 @@ export const createUser = async (data) => {
   };
   try {
     const res = await axios.post(
-      "http://resource.futsal-am.my.id/api/users/create",
+      "http://resource.futsal-am.online:3000/api/users/create",
       request,
       {
         headers: {
@@ -108,7 +108,7 @@ export const updateUser = async (data) => {
   };
   try {
     const res = await axios.patch(
-      `http://resource.futsal-am.my.id/api/users/update`,
+      `http://resource.futsal-am.online:3000/api/users/update`,
       request,
       {
         headers: {
@@ -127,7 +127,7 @@ export const deleteUser = async (id) => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.delete(
-      `http://resource.futsal-am.my.id/api/users/delete`,
+      `http://resource.futsal-am.online:3000/api/users/delete`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -148,7 +148,7 @@ export const Logout = async () => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      `http://resource.futsal-am.my.id/api/users/logout`,
+      `http://resource.futsal-am.online:3000/api/users/logout`,
       {
         headers: {
           "Content-Type": "application/json",

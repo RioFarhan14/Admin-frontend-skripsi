@@ -10,7 +10,7 @@ export const createMemberWithCash = async (data) => {
   };
   try {
     const res = await axios.post(
-      "http://resource.futsal-am.my.id/api/users/transaction-cash",
+      "http://resource.futsal-am.online:3000/api/users/transaction-cash",
       req,
       {
         headers: {
@@ -35,7 +35,7 @@ export const createMemberWithDigitalPayment = async (data) => {
   };
   try {
     const res = await axios.post(
-      "http://resource.futsal-am.my.id/api/users/transaction",
+      "http://resource.futsal-am.online:3000/api/users/transaction",
       req,
       {
         headers: {
@@ -54,7 +54,7 @@ export const getMember = async () => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      "http://resource.futsal-am.my.id/api/users/membership",
+      "http://resource.futsal-am.online:3000/api/users/membership",
       {
         headers: {
           "Content-Type": "application/json",

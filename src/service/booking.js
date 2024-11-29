@@ -4,7 +4,7 @@ export const getBookings = async () => {
   const token = localStorage.getItem("token");
   try {
     const res = await axios.get(
-      "http://resource.futsal-am.my.id/api/users/booking",
+      "http://resource.futsal-am.online:3000/api/users/booking",
       {
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export const createBookingWithCash = async (data) => {
   };
   try {
     const res = await axios.post(
-      "http://resource.futsal-am.my.id/api/users/transaction-cash",
+      "http://resource.futsal-am.online:3000/api/users/transaction-cash",
       req,
       {
         headers: {
@@ -72,7 +72,7 @@ export const createBookingWithDigitalPayment = async (data) => {
   };
   try {
     const res = await axios.post(
-      "http://resource.futsal-am.my.id/api/users/transaction",
+      "http://resource.futsal-am.online:3000/api/users/transaction",
       req,
       {
         headers: {
